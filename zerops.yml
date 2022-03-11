@@ -5,3 +5,7 @@ app:
       - yarn
       - yarn build
     deploy: [ 'build/~/' ]
+  run:
+    envReplace:
+      target: [ '.' ]
+      delimiter: [ '%%' ]
