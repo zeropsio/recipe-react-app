@@ -20,8 +20,8 @@
     "web-vitals": "^1.0.1",
     "@zerops/zestratcss": "0.0.14",
     "@zerops/project-diagram": "0.0.4",
-    "@zerops/zestrat-models": "0.0.16",
-    "@zerops/zestrat-react": "0.0.16"
+    "@zerops/zestrat-models": "0.0.18",
+    "@zerops/zestrat-react": "0.0.18"
   },
   "scripts": {
     "start": "react-scripts start",
