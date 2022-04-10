@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Recipe } from '@zerops/zestrat-models';
 import { ZsRecipeInfo } from '@zerops/zestrat-react';
@@ -8,25 +8,43 @@ const queryClient = new QueryClient()
 
 const App: React.FC = () => {
 
-  const recipe: Recipe = JSON.parse(process.env.REACT_APP_RECIPE_CONFIG || '{}');
+  const recipe: Recipe = JSON.parse(process.env.REACT_APP_RECIPE_CONFIG as string);
 
-  return (<div className="zs-recipe">
+  const zProjectDiagramElRef = useRef<any>(null);
 
-    <div className="zs-recipe-context">
+  const onAdd = () => {
+    zProjectDiagramElRef.current.simulatePost(`${recipe.apiEndpoint}/todos`, ['db']);
+  };
 
-      <ZsRecipeInfo intro={recipe.intro} desc={recipe.description} />
+  const onUpdate = () => {
+    zProjectDiagramElRef.current.simulatePatch(`${recipe.apiEndpoint}/todos`, ['db']);
+  };
+
+  const onRemove = () => {
+    zProjectDiagramElRef.current.simulateDelete(`${recipe.apiEndpoint}/todos`, ['db']);
+  };
+
+  useEffect(() => {
+    zProjectDiagramElRef.current.simulateGet(recipe.guiEndpoint);
+    zProjectDiagramElRef.current.simulateGet(`${recipe.apiEndpoint}/todos`, ['db']);
+  }, [ zProjectDiagramElRef, recipe ]);
+
+  return (<div>
+
+    <div className="zs-app">
+      <ZsRecipeInfo
+        intro={recipe.intro}
+        desc={recipe.description}
+      />
 
       <QueryClientProvider client={queryClient}>
-        <TodoData />
+        <TodoData onAdd={onAdd} onUpdate={onUpdate} onRemove={onRemove} />
       </QueryClientProvider>
-
     </div>
 
-    <div className="zs-recipe-diagram">
-      <z-project-diagram services={JSON.stringify(recipe?.services)}></z-project-diagram>
-    </div>
+    <z-project-diagram ref={zProjectDiagramElRef} project-name={recipe?.projectName} services={JSON.stringify(recipe?.services)}></z-project-diagram>
 
-  </div>)
+  </div>);
 };
 
 export default App;

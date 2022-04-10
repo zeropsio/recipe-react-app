@@ -5,7 +5,17 @@ import useAddTodo from '../../hooks/useAddTodo';
 import useDeleteTodo from '../../hooks/useDeleteTodo';
 import useUpdateTodo from '../../hooks/useUpdateTodo';
 
-export const TodoData = () => {
+export interface ITodosDataProps {
+  onAdd?: () => void;
+  onRemove?: () => void;
+  onUpdate?: () => void;
+}
+
+export const TodoData = ({
+  onAdd,
+  onRemove,
+  onUpdate
+}: ITodosDataProps) => {
 
   const { data: todos, refetch: getTodos } = useGetTodos();
 
@@ -14,6 +24,7 @@ export const TodoData = () => {
   const updateTodo = useUpdateTodo();
 
   const handleAdd = (text: string): void => {
+    if (onAdd) { onAdd() };
     addTodo.mutate(
       { text },
       { onSuccess: () => getTodos() }
@@ -21,6 +32,7 @@ export const TodoData = () => {
   };
 
   const handleUpdate = (id: any, data: Partial<Todo>): void => {
+    if (onUpdate) { onUpdate() };
     updateTodo.mutate(
       { id, ...data },
       { onSuccess: () => getTodos() }
@@ -28,6 +40,7 @@ export const TodoData = () => {
   };
 
   const handleRemove = (id: any): void => {
+    if (onRemove) { onRemove() };
     removeTodo.mutate(id, {
       onSuccess: () => getTodos()
     })

@@ -1,9 +1,13 @@
+import { Recipe } from '@zerops/zestrat-models';
 import axios from 'axios';
 import { useQuery } from 'react-query';
 
 const useGetTodos = () => {
+  const recipe: Recipe = JSON.parse(process.env.REACT_APP_RECIPE_CONFIG as string);
+  const apiEndpoint = `${recipe.apiEndpoint}/todos`;
+
   return useQuery('todos', () => axios.get(
-    `${process.env.REACT_APP_API_ENDPOINT}/todos`,
+    apiEndpoint,
   ).then(({ data }) => data));
 }
 

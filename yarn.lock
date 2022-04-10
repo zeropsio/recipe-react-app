@@ -2294,10 +2294,10 @@
   resolved "https://registry.npmjs.org/@zeit/schemas/-/schemas-2.6.0.tgz"
   integrity sha512-uUrgZ8AxS+Lio0fZKAipJjAh415JyrOZowliZAzmnJSsf7piVL5w+G0+gFJ0KSu3QRhvui/7zuvpLz03YjXAhg==
 
-"@zerops/project-diagram@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@zerops/project-diagram/-/project-diagram-0.0.4.tgz#ed1144b5dd231e17576ff0af01f2cca91f410125"
-  integrity sha512-Ov4caKDWnd1i108V3V1sKWpqQ/PUJFWM96rH5aZVb2WvmgQuy6k76gRChrhErK5SAZkDUj06ElwRIKLYIw9FCQ==
+"@zerops/project-diagram@0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@zerops/project-diagram/-/project-diagram-0.0.18.tgz#96a932cfc7bc92fca9f51d87af9c932f0b1a99ae"
+  integrity sha512-fNY5vFdlrzcaXBKa9/XQaSYFZ4pefv4IwJFcYXcVoGNWVHDm9ntf1emLVuIBXGlvsZCGk7icpZliEdpy1KnORQ==
   dependencies:
     "@angular/animations" "~13.1.0"
     "@angular/common" "~13.1.0"
@@ -2308,27 +2308,29 @@
     "@angular/platform-browser" "~13.1.0"
     "@angular/platform-browser-dynamic" "~13.1.0"
     "@angular/router" "~13.1.0"
-    leader-line-new "^1.1.9"
+    leader-line-zps "1.2.7"
+    lodash-es "^4.17.21"
+    panzoom "9.4.2"
     rxjs "~7.4.0"
-    tslib "^2.3.0"
+    tslib "2.3.0"
     zone.js "~0.11.4"
 
-"@zerops/zestrat-models@0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@zerops/zestrat-models/-/zestrat-models-0.0.15.tgz#45440899a621a9430ae270729afc5183e5fa4435"
-  integrity sha512-1QDdFIKMxiN/+ZyYtSyZoFHlsEl0/D+bJIDx4AzaizxL4hfP2dGAdQcdHrqlYqEbiwCm+1pZrWF5nX8JWXUCdw==
+"@zerops/zestrat-models@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@zerops/zestrat-models/-/zestrat-models-0.1.1.tgz#8cf32b2d54c00b265c9758908c42c7ead42f23e8"
+  integrity sha512-YAoCFcvl2M1B5sO9DC0MU2afbzx1pHj2Wd5xv30hmyUPDIAIiWCvV1JbSoUApPQLeB72wtP2MZHsSkvjxkSkjA==
   dependencies:
     tslib "^2.3.0"
 
-"@zerops/zestrat-react@0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@zerops/zestrat-react/-/zestrat-react-0.0.15.tgz#4acc13219b08030decda4b966c06ef94d4372652"
-  integrity sha512-Ib0SrVl3gfrhDuPtqguEXZd62BN6pMYDznxCMJTch1irMXOvuzEIfn7cDMJ6dWEohWJByqgUcY0Rfb1eAQUtNw==
+"@zerops/zestrat-react@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@zerops/zestrat-react/-/zestrat-react-0.1.1.tgz#930ff38519b45793e551b56447fa32ff4184db5a"
+  integrity sha512-eDgPaglXhvc17EvrscvfJZOSn+TIXDVqcuUvy5Zqpk+nsuL1t74nqcLTcaS6/q9qQEvVvHfFefZXebuX+uEyAg==
 
-"@zerops/zestratcss@0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@zerops/zestratcss/-/zestratcss-0.0.10.tgz#864cff0c67e812840e31f21116f096c41f30c611"
-  integrity sha512-6SCCINv2c9JqKmIx2wghAJP4QZlqsp9yXhtYzHcW9e++6aFy6fmvN6FOv54j3w4oo3e3cN8p3nMaBmvuJyCLSQ==
+"@zerops/zestratcss@0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@zerops/zestratcss/-/zestratcss-0.1.4.tgz#2fddfee26c71bb0c110e84af53b020c9ce80b6a1"
+  integrity sha512-8JRfo4yPB1ZVQw1qCMA6q2xaG6wvRJPoNndKHTkFue43SiTbTa1u6Vx2t8cnJIKqYfU5RgZ+ACsp+EDyg0B7Tg==
   dependencies:
     "@angular/animations" "~13.2.5"
     "@angular/common" "~13.2.5"
@@ -2439,6 +2441,13 @@ alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.npmjs.org/alphanum-sort/-/alphanum-sort-1.0.2.tgz"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
+
+amator@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/amator/-/amator-1.1.0.tgz#08c6b60bc93aec2b61bbfc0c4d677d30323cc0f1"
+  integrity sha1-CMa2C8k67Cthu/wMTWd9MDI8wPE=
+  dependencies:
+    bezier-easing "^2.0.3"
 
 ansi-align@^3.0.0:
   version "3.0.1"
@@ -2956,6 +2965,11 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+bezier-easing@^2.0.3:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
+  integrity sha1-wE3+i5JtbsrKGBPWn/F5t8ICXYY=
 
 bfj@^7.0.2:
   version "7.0.2"
@@ -7151,10 +7165,10 @@ last-call-webpack-plugin@^3.0.0:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
 
-leader-line-new@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.npmjs.org/leader-line-new/-/leader-line-new-1.1.9.tgz"
-  integrity sha512-x56aRYaqJTA4aAS2fgbSpvWKY3IxRXDSFeGkNBmCQ3LX44B3F1HEjcBTkCiK5I3W0nPWeUTWe7dTt59VtdfFWw==
+leader-line-zps@1.2.7:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/leader-line-zps/-/leader-line-zps-1.2.7.tgz#6fea9c67e117c43379f9a41ad63083e228e10895"
+  integrity sha512-dJqeIKXeDKPfbtaePfnE2Fh6Pefw8jL7JC6VA7mYtwmbhk1wX4JmLMTx6C0fUZ2ikjOzRuG6yRUhiV8dZfZaoQ==
 
 leven@^3.1.0:
   version "3.1.0"
@@ -7246,6 +7260,11 @@ locate-path@^5.0.0:
   integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
   dependencies:
     p-locate "^4.1.0"
+
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
@@ -7733,6 +7752,11 @@ next-tick@~1.0.0:
   resolved "https://registry.npmjs.org/next-tick/-/next-tick-1.0.0.tgz"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
+ngraph.events@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ngraph.events/-/ngraph.events-1.2.1.tgz#6e40425ef9dec1e074bbef6da56c8d79b9188fd8"
+  integrity sha512-D4C+nXH/RFxioGXQdHu8ELDtC6EaCiNsZtih0IvyGN81OZSUby4jXoJ5+RNWasfsd0FnKxxpAROyUMzw64QNsw==
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz"
@@ -8165,6 +8189,15 @@ pako@~1.0.5:
   version "1.0.11"
   resolved "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
+
+panzoom@9.4.2:
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/panzoom/-/panzoom-9.4.2.tgz#5b3ebdb72efbedfbd51e09bca6134248ad8ccad7"
+  integrity sha512-sQLr0t6EmNFXpZHag0HQVtOKqF9xjF7iZdgWg3Ss1o7uh2QZLvcrz7S0Cl8M0d2TkPZ69JfPJdknXN3I0e/2aQ==
+  dependencies:
+    amator "^1.1.0"
+    ngraph.events "^1.2.1"
+    wheel "^1.0.0"
 
 parallel-transform@^1.1.0:
   version "1.2.0"
@@ -11051,6 +11084,11 @@ tsconfig-paths@^3.9.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
+tslib@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
@@ -11632,6 +11670,11 @@ whatwg-url@^8.0.0:
     lodash.sortby "^4.7.0"
     tr46 "^2.0.2"
     webidl-conversions "^6.1.0"
+
+wheel@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wheel/-/wheel-1.0.0.tgz#6cf46e06a854181adb8649228077f8b0d5c574ce"
+  integrity sha512-XiCMHibOiqalCQ+BaNSwRoZ9FDTAvOsXxGHXChBugewDj7HC8VBIER71dEOiRH1fSdLbRCQzngKTSiZ06ZQzeA==
 
 which-module@^2.0.0:
   version "2.0.0"
