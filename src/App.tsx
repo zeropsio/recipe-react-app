@@ -8,33 +8,33 @@ const queryClient = new QueryClient()
 
 const App: React.FC = () => {
 
-  const recipe: Recipe = JSON.parse(process.env.REACT_APP_RECIPE_CONFIG as string);
+  const zeropsRecipeConfig: Recipe = JSON.parse(process.env.REACT_APP_RECIPE_CONFIG as string);
 
   const zProjectDiagramElRef = useRef<any>(null);
 
   const onAdd = () => {
-    zProjectDiagramElRef.current.simulatePost(`${recipe.apiEndpoint}/todos`, ['db']);
+    zProjectDiagramElRef.current.simulatePost(`${zeropsRecipeConfig.apiEndpoint}/todos`, ['db']);
   };
 
   const onUpdate = () => {
-    zProjectDiagramElRef.current.simulatePatch(`${recipe.apiEndpoint}/todos`, ['db']);
+    zProjectDiagramElRef.current.simulatePatch(`${zeropsRecipeConfig.apiEndpoint}/todos`, ['db']);
   };
 
   const onRemove = () => {
-    zProjectDiagramElRef.current.simulateDelete(`${recipe.apiEndpoint}/todos`, ['db']);
+    zProjectDiagramElRef.current.simulateDelete(`${zeropsRecipeConfig.apiEndpoint}/todos`, ['db']);
   };
 
   useEffect(() => {
-    zProjectDiagramElRef.current.simulateGet(recipe.guiEndpoint);
-    zProjectDiagramElRef.current.simulateGet(`${recipe.apiEndpoint}/todos`, ['db']);
-  }, [ zProjectDiagramElRef, recipe ]);
+    zProjectDiagramElRef.current.simulateGet(zeropsRecipeConfig.guiEndpoint);
+    zProjectDiagramElRef.current.simulateGet(`${zeropsRecipeConfig.apiEndpoint}/todos`, ['db']);
+  }, [ zProjectDiagramElRef, zeropsRecipeConfig ]);
 
   return (<div>
 
     <div className="zs-app">
       <ZsRecipeInfo
-        intro={recipe.intro}
-        desc={recipe.description}
+        intro={zeropsRecipeConfig.intro}
+        desc={zeropsRecipeConfig.description}
       />
 
       <QueryClientProvider client={queryClient}>
@@ -42,7 +42,11 @@ const App: React.FC = () => {
       </QueryClientProvider>
     </div>
 
-    <z-project-diagram ref={zProjectDiagramElRef} project-name={recipe?.projectName} services={JSON.stringify(recipe?.services)}></z-project-diagram>
+    <z-project-diagram
+      ref={zProjectDiagramElRef}
+      project-name={zeropsRecipeConfig?.projectName}
+      services={JSON.stringify(zeropsRecipeConfig?.services)}>
+    </z-project-diagram>
 
   </div>);
 };
