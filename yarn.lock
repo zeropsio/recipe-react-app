@@ -2294,10 +2294,10 @@
   resolved "https://registry.npmjs.org/@zeit/schemas/-/schemas-2.6.0.tgz"
   integrity sha512-uUrgZ8AxS+Lio0fZKAipJjAh415JyrOZowliZAzmnJSsf7piVL5w+G0+gFJ0KSu3QRhvui/7zuvpLz03YjXAhg==
 
-"@zerops/project-diagram@0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@zerops/project-diagram/-/project-diagram-0.0.18.tgz#96a932cfc7bc92fca9f51d87af9c932f0b1a99ae"
-  integrity sha512-fNY5vFdlrzcaXBKa9/XQaSYFZ4pefv4IwJFcYXcVoGNWVHDm9ntf1emLVuIBXGlvsZCGk7icpZliEdpy1KnORQ==
+"@zerops/project-diagram@0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@zerops/project-diagram/-/project-diagram-0.0.19.tgz#8d7fad58768df8d6524895099a456a3b452ffc98"
+  integrity sha512-2OizWWKQOPmn36KyaWYrV65cWLYpUZCKkAGHQAikPnDOcGLBEgc+9ypbJElqiOR7luB+4sttTuIQNMBPeyW1LA==
   dependencies:
     "@angular/animations" "~13.1.0"
     "@angular/common" "~13.1.0"
@@ -2322,10 +2322,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@zerops/zestrat-react@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@zerops/zestrat-react/-/zestrat-react-0.1.1.tgz#930ff38519b45793e551b56447fa32ff4184db5a"
-  integrity sha512-eDgPaglXhvc17EvrscvfJZOSn+TIXDVqcuUvy5Zqpk+nsuL1t74nqcLTcaS6/q9qQEvVvHfFefZXebuX+uEyAg==
+"@zerops/zestrat-react@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@zerops/zestrat-react/-/zestrat-react-0.1.2.tgz#25275476193be5f89e3645f95cd170fb26453f4c"
+  integrity sha512-eXmmnbhYzNOUNJ//8qhYvuZNVT2p09Z1KsE6p2N5BQGaeOl8bj+/4yYcojTR1VxdCi1/P02f3TVqzJ/tYZfysw==
 
 "@zerops/zestratcss@0.1.4":
   version "0.1.4"

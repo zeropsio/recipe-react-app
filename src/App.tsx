@@ -35,6 +35,7 @@ const App: React.FC = () => {
       <ZsRecipeInfo
         intro={zeropsRecipeConfig.intro}
         desc={zeropsRecipeConfig.description}
+        knowledgeBaseLink={zeropsRecipeConfig.knowledgeBaseLink}
       />
 
       <QueryClientProvider client={queryClient}>
