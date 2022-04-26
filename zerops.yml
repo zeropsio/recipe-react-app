@@ -7,5 +7,5 @@ app:
     deploy: [ 'build/~/' ]
   run:
     envReplace:
-      target: [ './static' ]
+      target: [ './static/js' ]
       delimiter: [ '%%' ]
