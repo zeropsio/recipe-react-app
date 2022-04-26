@@ -2,7 +2,7 @@ app:
   build:
     base: [ nodejs@14 ]
     build:
-      - ls
+      - ls -a
       - yarn
       - yarn build
     deploy: [ 'build/~/' ]
