@@ -3,7 +3,7 @@ app:
     base: [ nodejs@14 ]
     build:
       - yarn
-      - yarn build
+      - yarn build --prod
     deploy: [ 'build/~/' ]
   run:
     envReplace:
