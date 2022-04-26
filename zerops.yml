@@ -4,8 +4,8 @@ app:
     build:
 
       - ls -a
-      - sudo cp -fr ./env.js ./node_modules/react-scripts/config/env.js
       - yarn
+      - sudo cp -fr ./env.js ./node_modules/react-scripts/config/env.js
       - yarn build
     deploy: [ 'build/~/' ]
   run:
