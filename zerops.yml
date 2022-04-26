@@ -2,8 +2,9 @@ app:
   build:
     base: [ nodejs@14 ]
     build:
+      - ls
       - yarn
-      - yarn build --prod && echo "$REACT_APP_RECIPE_CONFIG"
+      - yarn build
     deploy: [ 'build/~/' ]
   run:
     envReplace:
