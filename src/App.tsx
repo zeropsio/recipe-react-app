@@ -38,9 +38,9 @@ const App: React.FC = () => {
         knowledgeBaseLink={zeropsRecipeConfig.knowledgeBaseLink}
       />
 
-      <QueryClientProvider client={queryClient}>
+      {<QueryClientProvider client={queryClient}>
         <TodoData onAdd={onAdd} onUpdate={onUpdate} onRemove={onRemove} />
-      </QueryClientProvider>
+      </QueryClientProvider>}
     </div>
 
     <z-project-diagram

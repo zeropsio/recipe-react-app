@@ -3,8 +3,8 @@ import axios from 'axios';
 import { useMutation } from 'react-query';
 
 const useAddTodo = () => {
-  const recipe: Recipe = JSON.parse(process.env.REACT_APP_RECIPE_CONFIG as string);
-  const apiEndpoint = `${recipe.apiEndpoint}/todos`;
+  const recipeConfig: Recipe = JSON.parse(process.env.REACT_APP_RECIPE_CONFIG as string);
+  const apiEndpoint = `${recipeConfig.apiEndpoint}/todos`;
 
   return useMutation(({ text, completed }: Partial<Todo>) => axios.post(
     apiEndpoint,
